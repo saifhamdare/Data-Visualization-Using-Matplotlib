@@ -33,10 +33,10 @@ def main():
     text_input = StringVar()
     text_entry = Entry(window, textvariable = 'text_input', border= 1,font = (20))
     window.title('Attendance Management System')#Ploting the titlte
-    label = Label(window,text= 'Welcome To Attendance Management System',font = ('bold',16))#ploting the label
-    btn = Button(window, text = 'To show all defaulter',command = output_database )
-    btn2 = Button(window, text = 'To show Specific Graph Data',command = inp_text)
-    btn3 = Button(window, text = 'To Show All Data',command = all_data)
+    label = Label(window,text= 'Welcome To Attendance Management System',font = ('arial bold',20))#ploting the label
+    btn = Button(window, text = 'All defaulter',command = output_database ,font = ('arial bold',12) ,bg="red",fg="white")
+    btn2 = Button(window, text = 'Graph Data',command = inp_text ,font = ('arial bold',12),bg="white",fg="black")
+    btn3 = Button(window, text = 'All Data',command = all_data,font = ('arial bold',12),bg="black",fg="white")
 
     op = Listbox(window, height = 10, width = 100, border = 0)
 
@@ -45,7 +45,7 @@ def main():
     op.configure(yscrollcommand = scroll.set)
     scroll.configure(command = op.yview)
 
-    clr_btn = Button(window, text = 'CLear', command = clear_text )
+    clr_btn = Button(window, text = 'Clear', command = clear_text ,font = ('arial bold',12),bg="black",fg="white")
     label.pack()
 
     btn.place(x = 30, y = 50 )
